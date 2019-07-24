@@ -1,8 +1,8 @@
 class VehiclesController < ApplicationController
 
 	def index
-		@seeded_vehicles = Vehicle.all
-		@vehicles = @seeded_vehicles.order(year: :desc)
+		@@vehicles = Vehicle.all
+		@vehicles = @vehicles.order(year: :desc)
 		render json: @vehicles
 
 	end
