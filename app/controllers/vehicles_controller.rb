@@ -14,7 +14,8 @@ class VehiclesController < ApplicationController
 
 	def create
 
-   @vehicle = Vehicle.create(vehicle_params)
+   @vehicle = Vehicle.new(vehicle_params)
+   @vehicle.save
   render json: @vehicle
 	end
 
