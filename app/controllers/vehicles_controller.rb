@@ -9,6 +9,10 @@ class VehiclesController < ApplicationController
 
 
 	def destroy
+		
+		@vehicle = Vehicle.find_by(id: params[:vehicleId])
+	
+		@vehicle.destroy
 
 	end
 
